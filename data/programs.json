@@ -1,0 +1,87 @@
+{
+  "programs": [
+    {
+      "id": "text-uppercase",
+      "name": "文本转大写工具",
+      "nameEn": "Text Uppercase Tool",
+      "description": "将输入的文本转换为大写格式，支持批量处理。",
+      "descriptionEn": "Convert input text to uppercase format.",
+      "category": "tool",
+      "tags": ["文本处理", "自动化", "入门"],
+      "difficulty": 1,
+      "language": "Python",
+      "repo": "https://github.com/ai-program-hub/text-uppercase",
+      "downloadUrl": "https://github.com/ai-program-hub/text-uppercase/archive/refs/heads/master.zip",
+      "aiGenerated": {
+        "model": "Kimi K2.5",
+        "date": "2026-03-01"
+      },
+      "featured": true
+    },
+    {
+      "id": "json-to-csv-converter",
+      "name": "JSON 转 CSV 转换器",
+      "nameEn": "JSON to CSV Converter",
+      "description": "将 JSON 数组格式的数据转换为 CSV 格式，支持嵌套字段展平。",
+      "descriptionEn": "Convert JSON array data to CSV format with nested field flattening.",
+      "category": "tool",
+      "tags": ["数据处理", "格式转换", "JSON", "CSV"],
+      "difficulty": 2,
+      "language": "Python",
+      "repo": "https://github.com/ai-program-hub/json-to-csv-converter",
+      "downloadUrl": "https://github.com/ai-program-hub/json-to-csv-converter/archive/refs/heads/master.zip",
+      "aiGenerated": {
+        "model": "Kimi K2.5",
+        "date": "2026-03-01"
+      },
+      "featured": true
+    },
+    {
+      "id": "guess-number-game",
+      "name": "猜数字游戏",
+      "nameEn": "Guess Number Game",
+      "description": "经典的猜数字小游戏，AI 随机生成一个数字，玩家来猜。",
+      "descriptionEn": "Classic number guessing game with hints.",
+      "category": "game",
+      "tags": ["游戏", "娱乐", "入门"],
+      "difficulty": 1,
+      "language": "Python",
+      "repo": "https://github.com/ai-program-hub/guess-number-game",
+      "downloadUrl": "https://github.com/ai-program-hub/guess-number-game/archive/refs/heads/master.zip",
+      "aiGenerated": {
+        "model": "Kimi K2.5",
+        "date": "2026-03-01"
+      },
+      "featured": true
+    },
+    {
+      "id": "batch-file-renamer",
+      "name": "批量文件重命名工具",
+      "nameEn": "Batch File Renamer",
+      "description": "批量重命名文件，支持添加前缀、后缀、序号等。",
+      "descriptionEn": "Batch rename files with prefix, suffix, numbering support.",
+      "category": "tool",
+      "tags": ["自动化", "文件管理", "批量处理"],
+      "difficulty": 2,
+      "language": "Python",
+      "repo": "https://github.com/ai-program-hub/batch-file-renamer",
+      "downloadUrl": "https://github.com/ai-program-hub/batch-file-renamer/archive/refs/heads/master.zip",
+      "aiGenerated": {
+        "model": "Kimi K2.5",
+        "date": "2026-03-01"
+      },
+      "featured": false
+    }
+  ],
+  "categories": [
+    {"id": "tool", "name": "工具", "nameEn": "Tools", "icon": "🔧"},
+    {"id": "game", "name": "游戏", "nameEn": "Games", "icon": "🎮"},
+    {"id": "automation", "name": "自动化", "nameEn": "Automation", "icon": "🤖"},
+    {"id": "data", "name": "数据处理", "nameEn": "Data Processing", "icon": "📊"}
+  ],
+  "stats": {
+    "totalPrograms": 4,
+    "totalDownloads": 0,
+    "lastUpdated": "2026-03-01"
+  }
+}

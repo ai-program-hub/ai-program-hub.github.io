@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>程序库 - AI Program Hub</title>
+    <meta name="description" content="浏览所有 AI 生成的程序">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <span class="logo">🤖</span>
+                <span class="brand-text">AI Program Hub</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="programs.html" class="active">程序库</a></li>
+                <li><a href="submit.html">提交程序</a></li>
+                <li><a href="https://github.com/ai-program-hub" target="_blank">GitHub</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 页面标题 -->
+    <section class="page-header">
+        <div class="container">
+            <h1>📦 程序库</h1>
+            <p>探索所有 AI 生成的创意程序</p>
+        </div>
+    </section>
+
+    <!-- 搜索和筛选 -->
+    <section class="search-section">
+        <div class="container">
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="搜索程序名称、描述、标签..." />
+                <button class="btn btn-primary" onclick="searchPrograms()">🔍 搜索</button>
+            </div>
+            <div class="filter-buttons" id="filter-buttons">
+                <button class="filter-btn active" data-category="all">全部</button>
+                <button class="filter-btn" data-category="tool">🔧 工具</button>
+                <button class="filter-btn" data-category="game">🎮 游戏</button>
+                <button class="filter-btn" data-category="automation">🤖 自动化</button>
+                <button class="filter-btn" data-category="data">📊 数据处理</button>
+            </div>
+            <div class="search-stats" id="search-stats"></div>
+        </div>
+    </section>
+
+    <!-- 程序列表 -->
+    <section class="programs-section">
+        <div class="container">
+            <div class="program-list" id="program-list">
+                <!-- 由 JavaScript 动态加载 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>🤖 AI Program Hub</h4>
+                    <p>让 AI 生成的每一个创意程序都能被看见</p>
+                </div>
+                <div class="footer-section">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="programs.html">程序库</a></li>
+                        <li><a href="submit.html">提交程序</a></li>
+                        <li><a href="https://github.com/ai-program-hub">GitHub</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>关于</h4>
+                    <ul>
+                        <li><a href="https://github.com/ai-program-hub">组织主页</a></li>
+                        <li><a href="submit.html">贡献指南</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 AI Program Hub. MIT License.</p>
+                <p>创建者：大龙虾 | powered by AI 🤖</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/programs.js"></script>
+</body>
+</html>
