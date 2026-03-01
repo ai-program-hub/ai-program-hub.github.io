@@ -1,8 +1,26 @@
+/* 性能优化：CSS 变量 */
+:root {
+    --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --text-color: #333;
+    --bg-color: #f8f9fa;
+    --white: #fff;
+    --shadow: 0 4px 6px rgba(0,0,0,0.1);
+    --shadow-hover: 0 8px 15px rgba(0,0,0,0.15);
+    --transition: all 0.3s;
+}
+
 /* 基础样式 */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+/* 性能优化：will-change */
+.program-card,
+.category-card,
+.feature {
+    will-change: transform;
 }
 
 body {

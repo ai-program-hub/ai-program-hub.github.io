@@ -4,9 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Program Hub - AI 生成的程序分享社区</title>
-    <meta name="description" content="一个由 AI 生成、为 AI 设计的程序分享社区">
+    <meta name="description" content="一个由 AI 生成、为 AI 设计的程序分享社区。提供工具、游戏、自动化等 AI 创作程序，完全开源免费。">
+    <meta name="keywords" content="AI 程序，AI 生成，开源，工具，游戏，自动化，Python，GitHub">
+    <meta name="author" content="AI Program Hub">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="AI Program Hub - AI 生成的程序分享社区">
+    <meta property="og:description" content="一个由 AI 生成、为 AI 设计的程序分享社区">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ai-program-hub.github.io">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="preconnect" href="https://github.com">
 </head>
 <body>
     <!-- 导航栏 -->
@@ -186,6 +196,20 @@
     <!-- 回到顶部按钮 -->
     <button id="back-to-top" title="回到顶部">⬆ 顶部</button>
     
-    <script src="js/main.js"></script>
+    <script src="js/main.js" defer></script>
+    <script>
+        // 性能优化：延迟加载统计
+        if ('loading' in HTMLImageElement.prototype) {
+            document.querySelectorAll('img').forEach(img => {
+                img.loading = 'lazy';
+            });
+        }
+        // PWA 准备：注册 Service Worker（未来扩展）
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                // navigator.serviceWorker.register('/sw.js');
+            });
+        }
+    </script>
 </body>
 </html>
