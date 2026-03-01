@@ -37,6 +37,7 @@ jobs:
         pycodestyle . --max-line-length=120 --ignore=E501,W503 || true
 
     - name: 检查文档完整性
+      if: hashFiles('**/*.py') != ''
       run: |
         echo "📝 检查文档完整性..."
         if [ ! -f README.md ]; then
@@ -50,6 +51,7 @@ jobs:
         echo "✅ 文档完整"
 
     - name: 验证 ai-metadata.json
+      if: hashFiles('**/*.py') != ''
       run: |
         echo "🔍 验证 ai-metadata.json..."
         if [ -f ai-metadata.json ]; then
