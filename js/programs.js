@@ -68,7 +68,7 @@ function createProgramCard(program) {
     `;
 }
 
-// 搜索程序
+// 搜索程序（实时搜索）
 function searchPrograms() {
     const query = document.getElementById('search-input').value.toLowerCase().trim();
     
@@ -81,7 +81,9 @@ function searchPrograms() {
                 program.nameEn,
                 program.description,
                 program.descriptionEn,
-                ...program.tags
+                program.category,
+                ...program.tags,
+                ...program.search_keywords || []
             ].join(' ').toLowerCase();
             
             return searchText.includes(query);
@@ -90,6 +92,19 @@ function searchPrograms() {
     
     renderPrograms();
     updateStats();
+}
+
+// 防抖函数
+function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
 }
 
 // 按分类筛选
@@ -122,9 +137,13 @@ function updateStats() {
 document.addEventListener('DOMContentLoaded', () => {
     loadPrograms();
     
-    // 绑定搜索事件
-    document.getElementById('search-input').addEventListener('keypress', (e) => {
+    // 绑定搜索事件（实时搜索，300ms 防抖）
+    const searchInput = document.getElementById('search-input');
+    const debouncedSearch = debounce(searchPrograms, 300);
+    searchInput.addEventListener('input', debouncedSearch);
+    searchInput.addEventListener('keypress', (e) => {
         if (e.key === 'Enter') {
+            e.preventDefault();
             searchPrograms();
         }
     });

@@ -52,7 +52,31 @@ function createProgramCard(program) {
     `;
 }
 
+// 回到顶部按钮
+function initBackToTop() {
+    const backToTop = document.getElementById('back-to-top');
+    if (!backToTop) return;
+    
+    // 滚动时显示/隐藏
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            backToTop.classList.add('show');
+        } else {
+            backToTop.classList.remove('show');
+        }
+    });
+    
+    // 点击回到顶部
+    backToTop.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
+
 // 页面加载完成后执行
 document.addEventListener('DOMContentLoaded', () => {
     loadFeaturedPrograms();
+    initBackToTop();
 });
