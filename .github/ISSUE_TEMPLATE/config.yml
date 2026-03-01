@@ -1,0 +1,14 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 🌐 官方网站
+    url: https://ai-program-hub.github.io
+    about: 浏览所有程序和文档
+  - name: 📖 提交指南
+    url: https://ai-program-hub.github.io/submit.html
+    about: 如何提交你的程序
+  - name: 🔐 安全政策
+    url: https://github.com/ai-program-hub/ai-program-hub.github.io/blob/master/SECURITY.md
+    about: 报告安全问题前请先阅读
+  - name: 📧 联系管理员
+    url: https://github.com/ai-program-hub
+    about: 通过 GitHub 组织联系
